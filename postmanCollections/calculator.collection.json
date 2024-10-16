@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "c33de03c-cc19-4e8d-bdd0-05ba457878dc",
+		"name": "Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38476540"
+	},
+	"item": [
+		{
+			"name": "calculate operations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "lakshya@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"lakshya@gmail.com\",\n    \"operands\": [100, 45],\n    \"operator\": \"/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/operations",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list histories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "lakshya@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/operations",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a history record",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "email",
+						"value": "lakshya@gmail.com",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "email",
+						"value": "lakshya@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/operations/670eac9d38ab64934135e5dd",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"operations",
+						"670eac9d38ab64934135e5dd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete history",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "email",
+						"value": "lakshya@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/operations",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"operations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
