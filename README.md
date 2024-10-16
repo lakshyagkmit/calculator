@@ -87,16 +87,16 @@ http://localhost:3000
 
 | Method | Endpoint           | Description                                    |
 |--------|--------------------|------------------------------------------------|
-| POST   | `/calculate`        | Perform an arithmetic operation.              |
-| GET    | `/history`          | Retrieve a user's calculation history.        |
-| DELETE | `/history/:id`      | Delete a specific calculation from history.   |
-| DELETE | `/history/reset`    | Reset the user's entire calculation history.  |
+| POST   | `/operations`        | Perform an arithmetic operation.              |
+| GET    | `/operations`          | Retrieve a user's calculation history.        |
+| DELETE | `/operations/:id`      | Delete a specific calculation from history.   |
+| DELETE | `/operations/reset`    | Reset the user's entire calculation history.  |
 
 # Example Request
 
 - Perform a Calculation
 
-- **POST** `/calculate`
+- **POST** `/operations`
 
 - Request Body:
 
