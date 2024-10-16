@@ -107,8 +107,7 @@ The application will expose the following APIs for interaction.
 ```json
 {
   "email": "user@example.com",
-  "input1": 10,
-  "input2": 20,
+  "operands": [10, 20],
   "operator": "+",
 }
 ```
@@ -116,8 +115,7 @@ The application will expose the following APIs for interaction.
 ```json
 {
   "email": "user@example.com",
-  "input1": 20,
-  "input2": 10,
+  "operands": [20, 10],
   "operator": "-",
 }
 ```
@@ -126,8 +124,7 @@ The application will expose the following APIs for interaction.
 ```json
 {
   "email": "user@example.com",
-  "input1": 10,
-  "input2": 20,
+  "operands": [20, 10],
   "operator": "*",
 }
 ```
@@ -136,8 +133,7 @@ The application will expose the following APIs for interaction.
 ```json
 {
   "email": "user@example.com",
-  "input1": 20,
-  "input2": 10,
+  "operands": [20, 10],
   "operator": "/",
 }
 ```
@@ -188,29 +184,25 @@ In case of an error (e.g., division by zero), return an appropriate error messag
 
 ```json
 [{
-"input1": 10,
-"input2": 20,
+"operands": [10, 20],
 "operator": "+",
 "output": 30,
 "timestamp": "14-10-24 6:06pm"
 },
 {
-"input1": 20,
-"input2": 10,
+"operands": [20, 10],
 "operator": "-",
 "output": 10,
 "timestamp": "14-10-24 6:16pm"
 },
 {
-"input1": 10,
-"input2": 20,
+"operands": [10, 20],
 "operator": "*",
 "output": 200,
 "timestamp": "14-10-24 6:06pm"
 },
 {
-"input1": 20,
-"input2": 10,
+"operands": [20, 10],
 "operator": "/",
 "output": 2,
 "timestamp": "14-10-24 6:06pm"
