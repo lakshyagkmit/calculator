@@ -39,7 +39,7 @@ Ensure you have the following installed:
 
     ```bash
     git clone https://github.com/yourusername/calculator-app.git
-    cd calculator-app
+    cd calculator
     ```
 
 2. Install dependencies:
@@ -128,8 +128,7 @@ npm test
 # Folder Structure
 
 ```bash
-Copy code
-calculator-app/
+calculator/
 │
 ├── src/
 │   ├── controllers/
