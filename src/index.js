@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-const dbConnect = require('./db/database.js');
+const dbConnect = require('./config/database.js');
 const operationsRoutes = require('./routes/operations.route');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yaml');
@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 const path = require('path');
-const swaggerFilePath = path.resolve(__dirname, '../swaggers/swagger.yaml');
+const swaggerFilePath = path.resolve(__dirname, './swagger/swagger.yaml');
 console.log('Looking for swagger file at:', swaggerFilePath);
 
 if (!fs.existsSync(swaggerFilePath)) {
