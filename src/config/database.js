@@ -4,7 +4,7 @@ const url = process.env.MONGODB_URL;
 
 const dbConnect = async () => {
 	try {
-		await mongoose.connect(`${url}/calculator`);
+		await mongoose.connect(`${url}`);
 		console.log("Db connection successful")
 	}
 	catch(err) {
