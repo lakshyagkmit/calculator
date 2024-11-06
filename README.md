@@ -23,7 +23,7 @@ This calculator application performs arithmetic operations like addition, subtra
 
 - **Basic Arithmetic Operations**: Addition, Subtraction, Multiplication, Division.
 - **History Management**: Retrieve, delete individual records, and reset all history.
-- **MongoDB Integration**: Uses MongoDB to store and manage user-specific history.
+- **Redis Integration**: Uses Redis to store and manage user-specific history.
 - **Swagger Documentation**: Provides API documentation via Swagger.
   
 ## Prerequisites
@@ -31,7 +31,7 @@ This calculator application performs arithmetic operations like addition, subtra
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (v14 or higher)
-- [MongoDB](https://www.mongodb.com/) (local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for cloud-based databases)
+- Redis in local
 
 ## Installation
 
@@ -53,7 +53,7 @@ Ensure you have the following installed:
 Create a `.env` file in the root directory and set the following environment variables:
 
 ```bash
-MONGODB_URL=<Your MongoDB connection URL>
+REDIS_URL=<Your Redis connection URL>
 PORT=3000
 ```
 
@@ -89,8 +89,6 @@ http://localhost:3000
 |--------|--------------------|------------------------------------------------|
 | POST   | `/operations`        | Perform an arithmetic operation.              |
 | GET    | `/operations`          | Retrieve a user's calculation history.        |
-| DELETE | `/operations/:id`      | Delete a specific calculation from history.   |
-| DELETE | `/operations/reset`    | Reset the user's entire calculation history.  |
 
 # Example Request
 
@@ -152,7 +150,7 @@ calculator/
 # Key Directories
 
 - `src/controllers/`: Contains route handler functions.
-- `src/db/`: Database connection setup (MongoDB).
+- `src/db/`: Database connection setup (Redis).
 - `src/models/`: Mongoose models for operations.
 - `src/routes/`: API route definitions.
 - `src/services/`: Business logic (e.g., calculations, history management).
