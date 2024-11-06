@@ -1,6 +1,4 @@
 const express = require('express');
-require('dotenv').config();
-const dbConnect = require('./config/database.js');
 const operationsRoutes = require('./routes/operations.route');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yaml');
@@ -34,7 +32,6 @@ app.get('/health', (req, res) => {
   res.json({ msg: 'Health ok!' });
 });
 
-dbConnect();
 
 app.listen(port, () => {
   console.log('Server is running on port', port);

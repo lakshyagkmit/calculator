@@ -1,15 +1,17 @@
-const mongoose = require('mongoose')
+const redis = require('redis');
+require('dotenv').config();
+const redisClient = redis.createClient({
+  url: process.env.REDIS_URL
+});
 
-const url = process.env.MONGODB_URL;
+redisClient.connect().catch(console.error);
 
-const dbConnect = async () => {
-	try {
-		await mongoose.connect(`${url}`);
-		console.log("Db connection successful")
-	}
-	catch(err) {
-		console.log("Error in DB Connection: ", err);
-	}
-}
+redisClient.on('connect', () => {
+  console.log('Connected to Redis');
+});
 
-module.exports = dbConnect;
+redisClient.on('error', (err) => {
+  console.error('Redis error:', err);
+});
+
+module.exports = redisClient;
